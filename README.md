@@ -90,27 +90,27 @@ Follow the instruction below to setup the instance:
 
    ```
    mongos> sh.status()
---- Sharding Status ---
-  sharding version: {
-        "_id" : 1,
-        "minCompatibleVersion" : 5,
-        "currentVersion" : 6,
-        "clusterId" : ObjectId("5a3876afe4db1e334a990972")
-}
-  shards:
-        {  "_id" : "shard0",  "host" : "shard0/mongo-shard0-mongodb-replicaset-0.mongo-shard0-mongodb-replicaset.default.svc.cluster.local:27017,mongo-shard0-mongodb-replicaset-1.mongo-shard0-mongodb-replicaset.default.svc.cluster.local:27017,mongo-shard0-mongodb-replicaset-2.mongo-shard0-mongodb-replicaset.default.svc.cluster.local:27017",  "state" : 1 }
-  active mongoses:
-        "3.4.10" : 1
- autosplit:
-        Currently enabled: yes
-  balancer:
-        Currently enabled:  yes
-        Currently running:  no
-                Balancer lock taken at Mon Dec 18 2017 21:17:19 GMT-0500 (EST) by ConfigServer:Balancer
-        Failed balancer rounds in last 5 attempts:  0
-        Migration Results for the last 24 hours:
-                No recent migrations
-  databases:
+   --- Sharding Status ---
+     sharding version: {
+           "_id" : 1,
+           "minCompatibleVersion" : 5,
+           "currentVersion" : 6,
+           "clusterId" : ObjectId("5a3876afe4db1e334a990972")
+   }
+     shards:
+           {  "_id" : "shard0",  "host" : "shard0/mongo-shard0-mongodb-replicaset-0.mongo-shard0-mongodb-replicaset.default.svc.cluster.local:27017,mongo-shard0-mongodb-replicaset-1.mongo-shard0-mongodb-replicaset.default.svc.cluster.local:27017,mongo-shard0-mongodb-replicaset-2.mongo-shard0-mongodb-replicaset.default.svc.cluster.local:27017",  "state" : 1 }
+     active mongoses:
+           "3.4.10" : 1
+    autosplit:
+           Currently enabled: yes
+     balancer:
+           Currently enabled:  yes
+           Currently running:  no
+                   Balancer lock taken at Mon Dec 18 2017 21:17:19 GMT-0500 (EST) by ConfigServer:Balancer
+           Failed balancer rounds in last 5 attempts:  0
+           Migration Results for the last 24 hours:
+                   No recent migrations
+     databases:
    ```
 
    Repeat this last step for each shard created in ICP.
@@ -143,9 +143,9 @@ Follow the instruction below to setup the instance:
 
 3.  Get collection info to verify the collection now exists:
 
-  ```
-  mongos> db.getCollectionInfos()
-  [
+    ```
+    mongos> db.getCollectionInfos()
+    [
           {
                   "name" : "testCollection",
                   "type" : "collection",
@@ -164,7 +164,7 @@ Follow the instruction below to setup the instance:
                           "ns" : "test.testCollection"
                   }
           }
-  ]
+    ]
     ```
 
 4. Verify that the document exists
